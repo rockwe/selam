@@ -1,0 +1,83 @@
+{
+  "home": {
+    "title": "Mensaje de bienvenida",
+    "introduction": "\n \nBienvenido a la aplicación de la tienda de productos.",
+    "commande": "ORDEN",
+    "passer": "GASTAR",
+    "suivre": "SIGA",
+    "reclamation": "RECLAMO",
+    "contrat" : "CONTACTAR",
+    "rechercher" : "Buscar juguetes"
+  },
+  "langue": {
+    "title": "IDIOMAS",
+    "sous_titre" : "Cambiar el idioma",
+    "introduction": "Aquí está la página del idioma."
+  },
+  "article": {
+    "marque": "LAS MARCAS",
+    "filtre" : "filtro",
+    "placeholder" : "Buscar Productos ..."
+  },
+  "panier": {
+    "sous_titre" : "Precio total de compra",
+    "passe_com" : "ORDEN",
+    "con_achat" : "CONTINUAR COMPRA"
+  },
+  "suivre": {
+    "sous_titre" : "Seguir ordenes",
+    "titre" : "COMANDOS"
+  },
+  "reclamer": {
+    "sous_titre" : "Forma de",
+    "titre" : "RECLAMOS",
+    "placeholder_recl" : "Ingrese su queja ...",
+    "placeholder_titre" : "Título de Reclamo ...",
+    "envoyer" : "ENVIAR A"
+  },
+  "contact": {
+    "sous_titre" : "Forma de",
+    "titre" : "CONTACTAR",
+    "placeholder" : "Ingresa tu mensaje ...",
+    "envoyer" : "ENVIAR A"
+  },
+  "login": {
+    "email" : "Email",
+    "pass" : "Contraseña",
+    "pass_oub" : "Contraseña olvidada ?",
+    "envoyer" : "INICIAR SESIÓN"
+  },
+  "profil": {
+    "sous_titre" : "Edita tu informacion",
+    "titre" : "MI CUENTA",
+    "nom" : "Apellido y Nombre",
+    "email" : "Email",
+    "pass" : "Contraseña",
+    "save" : "REGISTRO"
+  },
+  "detailA": {
+    "ajou_panier": "AÑADIR A LA CESTA"
+  },
+  "drawer": {
+    "accueil" : "Bienvenida",
+    "rechercher" : "Búsqueda",
+    "panier" : "Cesta",
+    "suivre_com" : "Seguir orden",
+    "reclamation" : "queja",
+    "scanner" : "escáner",
+    "langue" : "idiomas",
+    "contact" : "Contactar",
+    "setting" : "Ajustes",
+    "deconnecter" : "Salir"
+  },
+  "common": {
+    "currentLanguage": "\nEl idioma actual es ",
+    "actions": {
+      "toggleToFrench": "French",
+      "toggleToGerman": "Deutsch",
+      "toggleToEnglish": "English",
+      "toggleToSpanish": "Spanish",
+      "goToPage": "Open casa"
+    }
+  }
+}

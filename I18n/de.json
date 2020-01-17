@@ -1,0 +1,83 @@
+{
+  "home": {
+    "title": "Willkommen",
+    "introduction": "\nWillkommen in der Produkt-Store-App.",
+    "commande": "ORDER",
+    "passer": "SKIP",
+    "suivre": "FOLGEN",
+    "reclamation": "ANSPRUCH",
+    "contrat" : "KONTAKT",
+    "rechercher" : "Suche nach Spielzeug"
+  },
+  "langue": {
+    "title": "SPRACHEN",
+    "sous_titre" : "Sprache wechseln",
+    "introduction": "Text auf sprache"
+  },
+  "article": {
+    "marque": "DIE MARKEN",
+    "filtre" : "Filter",
+    "placeholder" : "Produkte suchen ..."
+  },
+  "panier": {
+    "sous_titre" : "Kaufpreis insgesamt",
+    "passe_com" : "BESTELLEN",
+    "con_achat" : "WEITER EINKAUF"
+  },
+  "suivre": {
+    "sous_titre" : "Bestellungen folgen",
+    "titre" : "BEFEHLE"
+  },
+  "reclamer": {
+    "sous_titre" : "Form von",
+    "titre" : "FORDERUNGEN",
+    "placeholder_recl" : "Geben Sie Ihre Beschwerde ein ...",
+    "placeholder_titre" : "Titel beanspruchen ...",
+    "envoyer" : "SENDEN"
+  },
+  "contact": {
+    "sous_titre" : "Form von",
+    "titre" : "KONTAKT",
+    "placeholder" : "Geben Sie Ihre Nachricht ein ...",
+    "envoyer" : "SENDEN"
+  },
+  "login": {
+    "email" : "Email",
+    "pass" : "Passwort",
+    "pass_oub" : "Passwort vergessen?",
+    "envoyer" : "ANMELDUNG"
+  },
+  "detailA": {
+    "ajou_panier": "IN DEN WARENKORB HINZUFÜGEN"
+  },
+  "profil": {
+    "sous_titre" : "Bearbeiten Sie Ihre Informationen",
+    "titre" : "MEIN KONTO",
+    "nom" : "Vor- und Nachname",
+    "email" : "Email",
+    "pass" : "Passwort",
+    "save" : "REGISTRIEREN"
+  },
+  "drawer": {
+    "accueil" : "willkommen",
+    "rechercher" : "Suche",
+    "panier" : "Korb",
+    "suivre_com" : "Bestellung folgen",
+    "reclamation" : "Beschwerde",
+    "scanner" : "Scanner",
+    "langue" : "Sprachen",
+    "contact" : "Kontakt",
+    "setting" : "Einstellungen",
+    "deconnecter" : "austragen"
+  },
+  "common": {
+    "currentLanguage": "Die Sprache ist auf '{{lng}}' gesetzt",
+    "actions": {
+      "toggleToFrench": "French",
+      "toggleToGerman": "Deutsch",
+      "toggleToEnglish": "English",
+      "toggleToSpanish": "Spanish",
+      "goToPage": "Öffne Seite "
+    }
+  }
+}

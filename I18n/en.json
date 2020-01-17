@@ -1,0 +1,83 @@
+{
+  "home": {
+    "title": "Welcome Message",
+    "introduction": "Welcome to the product store app.",
+    "commande": "ORDER",
+    "passer": "PASS",
+    "suivre": "TO FOLLOW",
+    "reclamation": "CLAIM",
+    "contact" : "CONTACT",
+    "rechercher" : "Look for toys"
+  },
+  "langue": {
+    "title": "LANGUAGES",
+    "sous_titre" : "Change the language",
+    "introduction": "This text on page two."
+  },
+  "article": {
+    "marque": "MARKS",
+    "filtre" : "Filter",
+    "placeholder" : "Search Products ..."
+  },
+  "panier": {
+    "sous_titre" : "Total purchase price",
+    "passe_com" : "TO ORDER",
+    "con_achat" : "CONTINUE PURCHASE"
+  },
+  "suivre": {
+    "sous_titre" : "Follow orders",
+    "titre" : "ORDERS"
+  },
+  "reclamer": {
+    "sous_titre" : "Form of",
+    "titre" : "CLAIMS",
+    "placeholder_recl" : "Enter your complaint ...",
+    "placeholder_titre" : "Claim Title ...",
+    "envoyer" : "TO SEND"
+  },
+  "contact": {
+    "sous_titre" : "Form of",
+    "titre" : "CONTACT",
+    "placeholder" : "Enter your message ...",
+    "envoyer" : "TO SEND"
+  },
+  "login": {
+    "email" : "Email",
+    "pass" : "Password",
+    "pass_oub" : "Contraseña olvidada ?",
+    "envoyer" : "LOGIN"
+  },
+  "profil": {
+    "sous_titre" : "Edit your information",
+    "titre" : "MY ACCOUNT",
+    "nom" : "Last name and first name",
+    "email" : "Email",
+    "pass" : "Password",
+    "save" : "SAVE"
+  },
+  "detailA": {
+    "ajou_panier": "ADD TO BASKET"
+  },
+  "drawer": {
+    "accueil" : "Home",
+    "rechercher" : "Research",
+    "panier" : "Basket",
+    "suivre_com" : "Follow order",
+    "reclamation" : "Claim",
+    "scanner" : "To scan",
+    "langue" : "languages",
+    "contact" : "Contact",
+    "setting" : "Settings",
+    "deconnecter" : "Sign Out"
+  },
+  "common": {
+    "currentLanguage": "The current language is ",
+    "actions": {
+      "toggleToFrench": "French",
+      "toggleToGerman": "Deutsch",
+      "toggleToEnglish": "English",
+      "toggleToSpanish": "Spanish",
+      "goToPage": "Open Home"
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "home": {
+    "title": "Mensaje de bienvenida",
+    "introduction": "\n \nBienvenue sur l'application du magasin de produits.",
+    "commande": "COMMANDE",
+    "passer": "PASSER",
+    "suivre": "SUIVRE",
+    "reclamation": "RECLAMATION",
+    "contrat" : "CONTACT",
+    "rechercher" : "Rechercher des jouets"
+  },
+  "langue": {
+    "title": "Langue",
+    "sous_titre" : "Changer la langue",
+    "introduction": "ici cest la page langue."
+  },
+  "article": {
+    "marque": "LES MARQUES",
+    "filtre" : "Filtrer",
+    "placeholder" : "Rechercher des Produits ..."
+  },
+  "panier": {
+    "sous_titre" : "Prix d'achat total",
+    "passe_com" : "PASSER LA COMMANDE",
+    "con_achat" : "CONTINUER L'ACHAT"
+  },
+  "suivre": {
+    "sous_titre" : "Suivre les commandes",
+    "titre" : "COMMANDES"
+  },
+  "reclamer": {
+    "sous_titre" : "Formulaire de",
+    "titre" : "RECLAMATIONS",
+    "placeholder_recl" : "Taper votre réclamation ...",
+    "placeholder_titre" : "Titre de reclamation ...",
+    "envoyer" : "ENVOYER"
+  },
+  "contact": {
+    "sous_titre" : "Formulaire de",
+    "titre" : "CONTACT",
+    "placeholder" : "Taper votre message ...",
+    "envoyer" : "ENVOYER"
+  },
+  "login": {
+    "email" : "Email",
+    "pass" : "Password",
+    "pass_oub" : "Mot de passe oubilié ?",
+    "envoyer" : "S'IDENTIFIER"
+  },
+  "profil": {
+    "sous_titre" : "Modifier vos information",
+    "titre" : "MON COMPTE",
+    "nom" : "Nom et Prénom",
+    "email" : "Email",
+    "pass" : "Mot de passe",
+    "save" : "ENREGISTRER"
+  },
+  "detailA": {
+    "ajou_panier": "AJOUTER AU PANIER"
+  },
+  "drawer": {
+    "accueil" : "Accueil",
+    "rechercher" : "Recherche",
+    "panier" : "Panier",
+    "suivre_com" : "Suivre commande",
+    "reclamation" : "Réclamation",
+    "scanner" : "Scanner",
+    "langue" : "Langues",
+    "contact" : "Contact",
+    "setting" : "Paramètres",
+    "deconnecter" : "Déconnection"
+  },
+  "common": {
+    "currentLanguage": "La langue actuelle est ",
+    "actions": {
+      "toggleToFrench": "French",
+      "toggleToGerman": "Deutsch",
+      "toggleToEnglish": "English",
+      "toggleToSpanish": "Spanish",
+      "goToPage": "Open accueil"
+    },
+    "infoText": "<0><0>Zero </O><1>One </1><2>Two </2><3>Three </3><4>Four</4></O>"
+  }
+}
