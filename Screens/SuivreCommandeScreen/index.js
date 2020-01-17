@@ -11,7 +11,6 @@ import {Badge} from "react-native-elements";
 import API from "../../Services/Api";
 import moment from 'moment'
 import List from "../../Components/ListOrder";
-import {withNamespaces} from "react-i18next";
 import Spinner from "../../Components/Spinner";
 import Error from "../../Components/Error";
 import { connect } from 'react-redux'
@@ -208,4 +207,3 @@ const mapStateToProps = (state) => {
     }
 };
 export default  connect(mapStateToProps)(SuivreCommandeScreen)
-withNamespaces(['suivre'], { wait: true })(SuivreCommandeScreen);

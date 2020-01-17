@@ -1,4 +1,4 @@
-import {Dimensions, Platform, StyleSheet} from "react-native";
+import {Dimensions, Platform, StyleSheet} from 'react-native';
 
 import { white, pink, blue, darkBlue,whiteblackfin } from '../../Styles/Colors';
 

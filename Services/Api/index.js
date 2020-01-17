@@ -71,12 +71,12 @@ let fetchArticles=  (params)=>  {
     if (params.designation && params.designation.trim().length)
         q += '&designation=' + params.designation;
     console.log("GOT Q = ", q);
-    return axios.get(API_BASE_URL + '/product' + q);
+    return axios.get(API_BASE_URL + '/article' + q);
 
 };
 
 let findArticle = (id) => {
-    return axios.get(API_BASE_URL + '/Product/' + id);
+    return axios.get(API_BASE_URL + '/article/' + id);
 };
 
 let createArticle = (params) => {

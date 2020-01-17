@@ -16,7 +16,6 @@ import { Fonts, Colors } from '../../constants';
 import styles from './styles';
 import { connect } from 'react-redux';
 import RNPickerSelect from 'react-native-picker-select';
-import i18n from "i18next";
 import DeviceInfo from 'react-native-device-info';
 import Feather from 'react-native-vector-icons/Feather';
 import FontA from 'react-native-vector-icons/MaterialIcons';
@@ -61,7 +60,7 @@ const language = [
          os: Platform.OS,
          version: DeviceInfo.getVersion(),
          type: DeviceInfo.getDeviceType().toLowerCase(),
-         pusherChannel: 'store-' + DeviceInfo.getDeviceId()+ '-' + Platform.OS.toLowerCase() + '-' + DeviceInfo.getDeviceCountry().split(' ').join("").toLowerCase(),
+         pusherChannel: 'store-' + DeviceInfo.getDeviceId()+ '-' + Platform.OS.toLowerCase() + '-' + DeviceInfo.getDeviceName(),
          hidePassword: true
 
 

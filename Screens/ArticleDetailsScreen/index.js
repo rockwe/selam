@@ -23,7 +23,7 @@ import {create,PREDEF_RES} from 'react-native-pixel-perfect'
 import {Badge} from "react-native-elements";
 import NumberFormat from "react-number-format";
 import CustomMenuIcon from "../../Components/CustomMenuIcon";
-import {withNamespaces} from "react-i18next";
+
 const calcSize = create(PREDEF_RES.iphone7.px);
 
 const uninformed = 'Uninformed';
@@ -294,7 +294,7 @@ class ArticleDetailsScreen extends Component{
                                     leftButtonBackgroundColor='#E56B70' />
                                 <View style={styles.row}>
                                     <Button mode="contained" onPress={() => this._togglePanier(articles, this.state.value)} style={styles.button}>
-                                        {screenProps.t('detailA:ajou_panier')}
+                                        {/*{screenProps.t('detailA:ajou_panier')}*/}
                                     </Button>
                                 </View>
                             </View>
@@ -318,5 +318,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(ArticleDetailsScreen)
-withNamespaces(['detailA'], { wait: true })(ArticleDetailsScreen);
+export default connect(mapStateToProps)(ArticleDetailsScreen);

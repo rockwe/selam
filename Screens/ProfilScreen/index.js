@@ -8,7 +8,6 @@ import FontA from "react-native-vector-icons/FontAwesome5";
 import {IconButton} from "react-native-paper";
 import styles from "./styles";
 import {Badge} from "react-native-elements";
-import {withNamespaces} from "react-i18next";
 import CustomMenuIcon from "../../Components/CustomMenuIcon";
 
 
@@ -177,4 +176,4 @@ const mapStateToProps = (state) => {
     }
 };
 export default  connect(mapStateToProps)(ProfilScreen);
-withNamespaces(['profil'], { wait: true })(ProfilScreen);
+

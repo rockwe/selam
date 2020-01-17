@@ -2,15 +2,16 @@ import React from 'react';
 import { Platform, Image, StyleSheet, StatusBar, TouchableOpacity, Dimensions } from 'react-native';
 import {
     createAppContainer,
-    createStackNavigator,
-    createBottomTabNavigator,
-    createSwitchNavigator,createDrawerNavigator
+    createSwitchNavigator
 } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createDrawerNavigator } from 'react-navigation-drawer';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+
 import { DrawerActions } from 'react-navigation'
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 
-import i18n from '../I18n/index';
-import {translate } from 'react-i18next';
+
 import PropTypes from 'prop-types';
 
 import HomeScreen from '../Screens/HomeScreen';
@@ -475,10 +476,7 @@ class WrappedStack extends React.Component {
         return <AppNavigator screenProps={{ t }} {...this.props} />;
     }
 }
-const ReloadAppOnLanguageChange = translate('common', {
-    bindI18n: 'languageChanged',
-    bindStore: false,
-})(createAppContainer(WrappedStack));
+const ReloadAppOnLanguageChange = (createAppContainer(WrappedStack));
 
 
 const styles = StyleSheet.create({
@@ -490,5 +488,5 @@ const styles = StyleSheet.create({
         backgroundColor: '#000000'
     },
 });
-export default ReloadAppOnLanguageChange
+export default ReloadAppOnLanguageChange;
 

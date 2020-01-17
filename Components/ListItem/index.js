@@ -90,15 +90,15 @@ class ListItem extends React.PureComponent {
 						textStyle={{color:'red'}}
 					/>
 					<View style={styles.containerItem}>
-						<TouchableOpacity onPress={() => navigate('ArticleDetails', { id: item._id })}>
-						<Image
-							source={getImageApi(item.pictures[0])}
+						{/*<TouchableOpacity onPress={() => navigate('ArticleDetails', { id: item._id })}>*/}
+						{/*<Image*/}
+						{/*	source={getImageApi(item.pictures[0])}*/}
 
-							style={styles.photo}
-							width={width * 0.3}
-							height={width * 0.3}
-						/>
-						</TouchableOpacity>
+						{/*	style={styles.photo}*/}
+						{/*	width={width * 0.3}*/}
+						{/*	height={width * 0.3}*/}
+						{/*/>*/}
+						{/*</TouchableOpacity>*/}
 						<View style={styles.item}>
 							<View>
 								<Text numberOfLines={2} style={styles.textTitle}>

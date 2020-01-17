@@ -1,8 +1,8 @@
 import {Dimensions, StyleSheet} from "react-native";
-import i18n from 'i18next';
+
 import { white, pink, blue, darkBlue,whiteblackfin } from '../../Styles/Colors';
 import { fontSizeResponsive, width } from '../../Utils/Metrics';
-let isRTL = i18n.dir();
+
 
 const styles = StyleSheet.create({
     contener_container: {

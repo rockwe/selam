@@ -17,7 +17,7 @@ export class Page2 extends React.Component {
 
     render() {
         console.log('prof->', this.props.authStateActions);
-        const { t, i18n, authStateActions } = this.props;
+        const { t, authStateActions } = this.props;
         return (
             <View style={styles.container}>
                 <Text>{t('introduction')}</Text>

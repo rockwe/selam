@@ -1,9 +1,9 @@
 import React from 'react';
 import {
     createAppContainer,
-    createStackNavigator,
     createSwitchNavigator,
 } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
 import ResetPaswordScreen from '../Screens/ResetPasswordScreen';
 import VerifierEmailScreen from '../Screens/VerfierEmailScreen';

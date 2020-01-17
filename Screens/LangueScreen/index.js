@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import {withNamespaces} from 'react-i18next';
-import i18n from 'i18next';
 import {StyleSheet, Text, View, Button, AsyncStorage, Image, ImageBackground, Platform} from 'react-native';
 import styles from './styles';
 import {
@@ -67,15 +65,15 @@ type State = {
     state = {
         checked: 'francais',
     };
-    async onChangeLang(lang) {
-        i18n.changeLanguage(lang);
-        try {
-            await AsyncStorage.setItem('@APP:languageCode',lang);
-        } catch (error) {
-          //  console.log(` Hi Errorrrr : ${error}`);
-        }
-      //  console.log(i18n.dir());
-    }
+    // async onChangeLang(lang) {
+    //     i18n.changeLanguage(lang);
+    //     try {
+    //         await AsyncStorage.setItem('@APP:languageCode',lang);
+    //     } catch (error) {
+    //       //  console.log(` Hi Errorrrr : ${error}`);
+    //     }
+    //   //  console.log(i18n.dir());
+    // }
     async componentDidMount(){
        let label = await AsyncStorage.getItem('label');
         this.setState({checked: label });
@@ -89,7 +87,7 @@ type State = {
      render() {
         //console.log('langeu-->', AsyncStorage.getItem('@APP:languageCode'));
        // console.log('lan-->', AsyncStorage.getItem('label'));
-        const { t, i18n, navigation, screenProps } = this.props;
+        const { t, navigation, screenProps } = this.props;
         const { theme: {colors: { background } }} = this.props;
 
         return (
@@ -246,7 +244,7 @@ const mapStateToProps = (state) => {
         panierArticle: state.panier.panierArticle,
     }
 };
-export default withTheme (connect(mapStateToProps)(LangueScreen))
-withNamespaces(['langue', 'common'], { wait: true })(LangueScreen);
+export default withTheme (connect(mapStateToProps)(LangueScreen));
+
 
 

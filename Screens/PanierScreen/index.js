@@ -13,7 +13,6 @@ import {Badge} from "react-native-elements";
 import NumberFormat from "react-number-format";
 import API from "../../Services/Api";
 import Toast, {DURATION} from 'react-native-easy-toast'
-import {withNamespaces} from "react-i18next";
 import CustomMenuIcon from "../../Components/CustomMenuIcon";
 
 
@@ -194,4 +193,3 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps)(PanierScreen);
-withNamespaces(['panier', 'common'], { wait: true })(PanierScreen);

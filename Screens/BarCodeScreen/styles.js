@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
     bottomOverlay: {
         bottom: 0,
         backgroundColor: 'rgba(0,0,0,0.4)',
-        flexDirection: 'row',
-        justifyContent: 'center',
+        //flexDirection: 'row',
+       // justifyContent: 'center',
         alignItems: 'center'
     },
     enterBarcodeManualButton: {

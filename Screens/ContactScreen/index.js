@@ -13,7 +13,7 @@ import API from '../../Services/Api'
 import Toast, {DURATION} from 'react-native-easy-toast'
 import call from 'react-native-phone-call';
 import {Share} from "../../Components/Share";
-import {withNamespaces} from "react-i18next";
+
 import ReclamationScreen from "../ReclamationScreen";
 import { connect } from 'react-redux'
 import CustomMenuIcon from "../../Components/CustomMenuIcon";
@@ -129,10 +129,10 @@ class ContactScreen extends Component{
                 >
                     <View style={styles.containerBackgroundPhotoInfo}>
                         <Text  style={styles.titleform}>
-                            {screenProps.t('contact:sous_titre')}
+                            {/*{screenProps.t('contact:sous_titre')}*/}
                         </Text>
                         <Text  style={styles.titleInfo}>
-                            {screenProps.t('contact:titre')}
+                            {/*{screenProps.t('contact:titre')}*/}
                         </Text>
                     </View>
                 </ImageBackground>
@@ -169,7 +169,7 @@ class ContactScreen extends Component{
                     style={styles.button}
                     onPress={() => this.addContact()}
                 >
-                    <Text style={styles.buttonText}>{screenProps.t('contact:envoyer')}  </Text>
+                    {/*<Text style={styles.buttonText}>{screenProps.t('contact:envoyer')}  </Text>*/}
                 </TouchableOpacity>
                 <View style={styles.tabbar}>
                     <TouchableOpacity>
@@ -196,4 +196,3 @@ const mapStateToProps = (state) => {
     }
 };
 export default connect(mapStateToProps)(ContactScreen)
-withNamespaces(['contact'], { wait: true })(ContactScreen);

@@ -13,7 +13,7 @@ import {darkBlue} from "../../Styles/Colors";
 import {Badge} from "react-native-elements";
 import API from '../../Services/Api'
 import Toast, {DURATION} from 'react-native-easy-toast'
-import {withNamespaces} from "react-i18next";
+
 import { connect } from 'react-redux'
 import CustomMenuIcon from "../../Components/CustomMenuIcon";
 
@@ -203,4 +203,3 @@ const mapStateToProps = (state) => {
     }
 };
 export default  connect(mapStateToProps)(ReclamationScreen)
-withNamespaces(['reclamer'], { wait: true })(ReclamationScreen);

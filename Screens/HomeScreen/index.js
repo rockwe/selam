@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 
 import {AsyncStorage, View, Text, ImageBackground, Platform} from 'react-native';
 
-import { DrawerActions } from 'react-navigation';
+import { DrawerActions } from 'react-navigation-drawer';
 import styles from './styles';
 import {TouchableOpacity} from "../../Components/TouchableOpacity";
-import {IconButton, Searchbar} from "react-native-paper";
+import {IconButton, Searchbar} from 'react-native-paper';
 import Feather from 'react-native-vector-icons/Feather';
-import FontA from "react-native-vector-icons/FontAwesome5";
+import FontA from 'react-native-vector-icons/FontAwesome5';
 import {  Badge } from 'react-native-elements'
-import {withNamespaces} from "react-i18next";
+
 import Search from  '../../Components/Search/index'
-import i18n from 'i18next';
+
 import { connect } from 'react-redux'
 import CustomMenuIcon from '../../Components/CustomMenuIcon';
 
@@ -87,7 +87,7 @@ class HomeScreen extends Component{
     render() {
        // console.log('connec-->',this.props);
        // console.log('token-->',AsyncStorage.getItem('token'));
-        const {  t, i18n, navigation, screenProps } = this.props;
+        const {  t, navigation, screenProps } = this.props;
         return (
             <View style={styles.container} >
                 <ImageBackground
@@ -98,22 +98,22 @@ class HomeScreen extends Component{
                 </ImageBackground>
                 <Search typeRequest={'search'} navigate={navigation.navigate} style={styles.searchbar} />
                 <View style={styles.contener_text} >
-                    <Text>  {screenProps.t('home:introduction')}</Text>
+                    {/*<Text>  {screenProps.t('home:introduction')}</Text>*/}
                 </View>
                 <View style={styles.contener_home} >
                     <View style={styles.container_home_one}>
                         <TouchableOpacity style={styles.contener} onPress={() => navigation.navigate("ArticleList")}>
                             <View style={styles.contener_image}>
                             <FontA name="shopping-cart" color="white" size={40} />
-                            <Text style={styles.text_style}> {screenProps.t('home:passer')} </Text>
-                            <Text style={styles.text_style_commandde}> {screenProps.t('home:commande')} </Text>
+                            {/*<Text style={styles.text_style}> {screenProps.t('home:passer')} </Text>*/}
+                            {/*<Text style={styles.text_style_commandde}> {screenProps.t('home:commande')} </Text>*/}
                             </View>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.contener} onPress={() => this.props.navigation.navigate("SuivreC")} >
                             <View style={styles.contener_image}>
                             <FontA name="truck" color="white" size={40} />
-                            <Text style={styles.text_style}>{screenProps.t('home:suivre')} </Text>
-                            <Text style={styles.text_style_commandde}> {screenProps.t('home:commande')} </Text>
+                            {/*<Text style={styles.text_style}>{screenProps.t('home:suivre')} </Text>*/}
+                            {/*<Text style={styles.text_style_commandde}> {screenProps.t('home:commande')} </Text>*/}
                             </View>
                         </TouchableOpacity>
 
@@ -122,13 +122,13 @@ class HomeScreen extends Component{
                         <TouchableOpacity style={styles.contener} onPress={() => this.props.navigation.navigate("Reclamation")}>
                             <View style={styles.contener_image}>
                             <FontA color="white" name="headset" size={40}  />
-                            <Text style={styles.text_style}> {screenProps.t('home:reclamation')} </Text>
+                            {/*<Text style={styles.text_style}> {screenProps.t('home:reclamation')} </Text>*/}
                             </View>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.contener} onPress={() => this.props.navigation.navigate("Contact")}>
                             <View style={styles.contener_image}>
                             <FontA color="white"  name="envelope" size={40}  />
-                            <Text style={styles.text_style}> {screenProps.t('home:contact')}  </Text>
+                            {/*<Text style={styles.text_style}> {screenProps.t('home:contact')}  </Text>*/}
                             </View>
                         </TouchableOpacity>
 
@@ -144,5 +144,4 @@ const mapStateToProps = (state) => {
         panierArticle: state.panier.panierArticle,
     }
 };
-export default connect(mapStateToProps)(HomeScreen)
-withNamespaces(['home', 'common'], { wait: true })(HomeScreen);
+export default connect(mapStateToProps)(HomeScreen);

@@ -12,12 +12,12 @@ import {TouchableOpacity} from '../../Components/TouchableOpacity';
 import API from '../../Services/Api'
 import {black, bleu, darkBlue} from '../../Styles/Colors';
 import styles from './styles';
-import {IconButton, Searchbar} from "react-native-paper";
+import {IconButton, Searchbar} from 'react-native-paper';
 import { connect } from 'react-redux'
-import {Badge} from "react-native-elements";
-import Search from "../../Components/Search/index";
-import {withNamespaces} from "react-i18next";
-import CustomMenuIcon from "../../Components/CustomMenuIcon";
+import {Badge} from 'react-native-elements';
+import Search from '../../Components/Search/index';
+
+import CustomMenuIcon from '../../Components/CustomMenuIcon';
 
 
 class ArticleListScreen extends Component {
@@ -267,16 +267,16 @@ class ArticleListScreen extends Component {
                 </ImageBackground>
 
                 <Searchbar
-                    placeholder={screenProps.t('article:placeholder')}
+                    // placeholder={screenProps.t('article:placeholder')}
                     onSubmitEditing={() => this._searchFilms()}
                     onChangeText={(text) => this._serachInputChanged(text)}
                     value={this.state.firstQuery}
                     style={styles.searchbar}
                 />
                 <View style={styles.marque_style}>
-                    <Text style={styles.text_marque}> {screenProps.t('article:marque')} </Text>
+                    {/*<Text style={styles.text_marque}> {screenProps.t('article:marque')} </Text>*/}
                     <TouchableOpacity onPress={this.actionFilter}>
-                        <Feather name="filter" size={23} color={bleu}> <Text style={{ color: '#000000'}}>  {screenProps.t('article:filtre')}  </Text> </Feather>
+                        {/*<Feather name="filter" size={23} color={bleu}> <Text style={{ color: '#000000'}}>  {screenProps.t('article:filtre')}  </Text> </Feather>*/}
                     </TouchableOpacity>
 
                 </View>
@@ -361,5 +361,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps)(ArticleListScreen)
-withNamespaces(['article', 'common'], { wait: true })(ArticleListScreen);
+export default connect(mapStateToProps)(ArticleListScreen);
