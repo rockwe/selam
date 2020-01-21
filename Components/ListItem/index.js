@@ -90,22 +90,22 @@ class ListItem extends React.PureComponent {
 						textStyle={{color:'red'}}
 					/>
 					<View style={styles.containerItem}>
-						{/*<TouchableOpacity onPress={() => navigate('ArticleDetails', { id: item._id })}>*/}
-						{/*<Image*/}
-						{/*	source={getImageApi(item.pictures[0])}*/}
+						<TouchableOpacity onPress={() => navigate('ArticleDetails', { id: item._id })}>
+						<Image
+							source={getImageApi(item.pictures[0])}
 
-						{/*	style={styles.photo}*/}
-						{/*	width={width * 0.3}*/}
-						{/*	height={width * 0.3}*/}
-						{/*/>*/}
-						{/*</TouchableOpacity>*/}
+							style={styles.photo}
+							width={width * 0.3}
+							height={width * 0.3}
+						/>
+						</TouchableOpacity>
 						<View style={styles.item}>
 							<View>
 								<Text numberOfLines={2} style={styles.textTitle}>
 									{item.title}
 								</Text>
 								<View style={[styles.textRow, styles.containerSubTitle]}>
-									<NumberFormat value={item.price} displayType={'text'} thousandSeparator={true} prefix={'€'} renderText={value => <Text style={styles.textSmall}>{value}</Text>} />
+									<NumberFormat value={item.price.amount} displayType={'text'} thousandSeparator={true} prefix={'€'} renderText={value => <Text style={styles.textSmall}>{value}</Text>} />
 									<Text style={styles.textSmall}>
 										{convertToDate(item.created_at)}
 									</Text>
@@ -190,10 +190,10 @@ class ListItem extends React.PureComponent {
 						<View style={[styles.textRow, styles.containerSubTitle]}>
 							<Text style={styles.textSmall}>
 								Prix unite { "\n"}
-								<NumberFormat value={item.price} displayType={'text'} thousandSeparator={true} prefix={'€'} renderText={value => <Text>{value}</Text>} />
+								<NumberFormat value={item.price.amount} displayType={'text'} thousandSeparator={true} prefix={'€'} renderText={value => <Text>{value}</Text>} />
 							</Text>
 							<Text style={styles.textSmall}>
-								Prix total { "\n"} {this.sommePrix(item.price, item._qty)}
+								Prix total { "\n"} {this.sommePrix(item.price.amount, item._qty)}
 							</Text>
 							<Text style={styles.textSmall}>
 									Quantite { "\n"} {item._qty}

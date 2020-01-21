@@ -100,11 +100,11 @@ type State = {
                 >
                     <View style={styles.containerBackgroundPhotoInfo}>
                         <Text  style={styles.titleform}>
-                            {screenProps.t('langue:sous_titre')}
+                            {/*{screenProps.t('langue:sous_titre')}*/}
 
                         </Text>
                         <Text  style={styles.titleInfo}>
-                            {screenProps.t('langue:title')}
+                            {/*{screenProps.t('langue:title')}*/}
                         </Text>
                     </View>
                 </ImageBackground>
@@ -123,7 +123,7 @@ type State = {
                         </View>
                         <View style={styles.container_langue}>
                             <Text  style={styles.name_Langue}>
-                                {screenProps.t('common:actions.toggleToFrench')}
+                                {/*{screenProps.t('common:actions.toggleToFrench')}*/}
                             </Text>
                             <Text  style={styles.Name_detail}>
                                 Langue par defaut
@@ -153,7 +153,7 @@ type State = {
                         </View>
                         <View style={styles.container_langue}>
                             <Text  style={styles.name_Langue}>
-                                {screenProps.t('common:actions.toggleToEnglish')}
+                                {/*{screenProps.t('common:actions.toggleToEnglish')}*/}
                             </Text>
                             <Text  style={styles.Name_detail}>
                                 Set ut perspiciatis unde
@@ -183,7 +183,7 @@ type State = {
                         </View>
                         <View style={styles.container_langue}>
                             <Text  style={styles.name_Langue}>
-                                {screenProps.t('common:actions.toggleToGerman')}
+                                {/*{screenProps.t('common:actions.toggleToGerman')}*/}
                             </Text>
                             <Text  style={styles.Name_detail}>
                                 Set ut perspiciatis unde
@@ -212,7 +212,7 @@ type State = {
                         </View>
                         <View style={styles.container_langue}>
                             <Text  style={styles.name_Langue}>
-                                {screenProps.t('common:actions.toggleToSpanish')}
+                                {/*{screenProps.t('common:actions.toggleToSpanish')}*/}
                             </Text>
                             <Text  style={styles.Name_detail}>
                                 Set ut perspiciatis unde

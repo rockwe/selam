@@ -166,10 +166,10 @@ import CustomMenuIcon from "../../Components/CustomMenuIcon";
                 >
                     <View style={styles.containerBackgroundPhotoInfo}>
                         <Text  style={styles.titleform}>
-                            {screenProps.t('suivre:sous_titre')}
+                            {/*{screenProps.t('suivre:sous_titre')}*/}
                         </Text>
                         <Text  style={styles.titleInfo}>
-                            {screenProps.t('suivre:titre')}
+                            {/*{screenProps.t('suivre:titre')}*/}
                         </Text>
                     </View>
                 </ImageBackground>

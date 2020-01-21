@@ -1,11 +1,15 @@
-import axios from 'axios';
+
+
 import { AsyncStorage } from 'react-native'
 
 const API_BASE_URL = "https://storeclient-api.herokuapp.com/api/v1";
 
+const axios = require('axios')
+
 
 axios.interceptors.request.use(async (config) => {
     const token =  await  AsyncStorage.getItem('token');
+    console.log('token->', this.token);
     if (token) {
         config.headers.Authorization = `Bearer ${token}`;
     }
@@ -79,13 +83,6 @@ let findArticle = (id) => {
     return axios.get(API_BASE_URL + '/article/' + id);
 };
 
-let createArticle = (params) => {
-    return axios.post(API_BASE_URL + '/Product/create', params);
-};
-
-let sendTypingEvent = (cid, status, uid) => {
-    return axios.get(API_BASE_URL + '/user/' + cid + '/' + status + '/typing?uid=' + uid);
-};
 
 let createClaim = (params) =>{
     return axios.post(API_BASE_URL + '/claim/create', params);
@@ -120,10 +117,8 @@ export default{
     updateProfile,
     updatePushToken,
     fetchConfigFilters,
-    createArticle,
     fetchArticles,
     findArticle,
-    sendTypingEvent,
     createClaim,
     createContact,
     findOrder,

@@ -32,7 +32,7 @@ const List = ({
         key={keyGrid}
         numColumns={numColumns}
         removeClippedSubviews={true}
-        keyExtractor={(item, index) => index && item._id.toString()}
+        keyExtractor={(item, index) => index && item._id.toString().indexOf('.')}
         refreshing={refreshing}
         onRefresh={onRefresh}
         ListFooterComponent={ListFooterComponent}

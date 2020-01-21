@@ -159,7 +159,7 @@ class ContactScreen extends Component{
                     onChangeText={(message) => this.setState({message}) }
                     defaultValue={this.state.message}
                     onBlur={()=>this.setState({Error: ''})}
-                    placeholder={screenProps.t('contact:placeholder')}
+                    // placeholder={screenProps.t('contact:placeholder')}
                     placeholderTextColor={'#c7c7c7'}
                     underlineColorAndroid={'transparent'}
                 />

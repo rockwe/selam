@@ -105,7 +105,7 @@ class PanierScreen extends Component{
       let sum = 0;
       items && items.map(i => {
           if (i) {
-              sum += i.price * (i._qty || 1);
+              sum += i.price.amount * (i._qty || 1);
           }
       });
       return sum;
@@ -122,7 +122,7 @@ class PanierScreen extends Component{
                 >
                     <View style={styles.containerBackgroundPhotoInfo}>
                         <Text  style={styles.titleform}>
-                            {screenProps.t('panier:sous_titre')}
+                            {/*{screenProps.t('panier:sous_titre')}*/}
                         </Text>
                         <Text  style={styles.titleInfo}>
                             <NumberFormat value={this.calculatePrices()} displayType={'text'} thousandSeparator={true} suffix={'€'} renderText={value => <Text>{value}</Text>} />
@@ -154,7 +154,7 @@ class PanierScreen extends Component{
                         onPress={() => this.addPanier() }
                     >
                         <Text style={[styles.buttonText, styles.buttonTextSave]}>
-                            {screenProps.t('panier:passe_com')}
+                            {/*{screenProps.t('panier:passe_com')}*/}
                         </Text>
                     </TouchableOpacity>
                     <TouchableOpacity
@@ -162,7 +162,7 @@ class PanierScreen extends Component{
                         onPress={() => navigation.navigate("ArticleList")}
                     >
                         <Text style={[styles.buttonText, styles.buttonTextSave]}>
-                            {screenProps.t('panier:con_achat')}
+                            {/*{screenProps.t('panier:con_achat')}*/}
                         </Text>
                     </TouchableOpacity>
                 </View>

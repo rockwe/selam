@@ -21,10 +21,11 @@ import NumericInput from 'react-native-numeric-input'
 import styles from './styles';
 import {create,PREDEF_RES} from 'react-native-pixel-perfect'
 import {Badge} from "react-native-elements";
-import NumberFormat from "react-number-format";
+
 import CustomMenuIcon from "../../Components/CustomMenuIcon";
 
 const calcSize = create(PREDEF_RES.iphone7.px);
+var NumberFormat = require('react-number-format');
 
 const uninformed = 'Uninformed';
 
@@ -146,7 +147,7 @@ class ArticleDetailsScreen extends Component{
                 price: data.data.price || 0,
                 bar_code: data.data.bar_code || 0,
                 description: data.data.description || uninformed,
-                amount: data.data.amount,
+                amount: data.data.price.amount,
                 images: this.formatImageUrl(data.data.pictures),
                 articles: data.data,
             });
@@ -256,7 +257,7 @@ class ArticleDetailsScreen extends Component{
                             <View style={styles.articleMontantInfo}>
                                 <View style={styles.contener_price}>
                                     <FontAwesome color="blue"  name="euro-sign" size={30}  />
-                                    <NumberFormat value={price} displayType={'text'} thousandSeparator={true} prefix={'€'} renderText={value => <Text>{value}</Text>} />
+                                    <NumberFormat value={amount} displayType={'text'} thousandSeparator={true} prefix={'€'} renderText={value => <Text>{value}</Text>} />
                                 </View>
                                 <View style={styles.contener_price}>
                                     <Feather color="red"  name="monitor" size={30}  />

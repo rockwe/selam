@@ -50,7 +50,7 @@ class ArticleListScreen extends Component {
         return {
             headerRight: (
                 <View style={styles.header}>
-                    <IconButton icon="shopping-cart" size={27} color="black" onPress={() => navigation.navigate("Panier")} />
+                    <IconButton icon="camera" size={27} color="black" onPress={() => navigation.navigate("Panier")} />
                     <CustomMenuIcon
                         //Menu Text
                         menutext="Menu"
@@ -242,7 +242,7 @@ class ArticleListScreen extends Component {
     }
 
     render() {
-      // console.log('ppppppp->', this.props);
+       console.log('ppppppp->', this.state.articles);
         const {navigation, screenProps, t} = this.props;
         const {
             isLoading,
@@ -276,7 +276,7 @@ class ArticleListScreen extends Component {
                 <View style={styles.marque_style}>
                     {/*<Text style={styles.text_marque}> {screenProps.t('article:marque')} </Text>*/}
                     <TouchableOpacity onPress={this.actionFilter}>
-                        {/*<Feather name="filter" size={23} color={bleu}> <Text style={{ color: '#000000'}}>  {screenProps.t('article:filtre')}  </Text> </Feather>*/}
+                        <Feather name="filter" size={23} color={bleu}> <Text style={{ color: '#000000'}}>   </Text> </Feather>
                     </TouchableOpacity>
 
                 </View>
