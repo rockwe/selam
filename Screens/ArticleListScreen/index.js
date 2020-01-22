@@ -50,7 +50,7 @@ class ArticleListScreen extends Component {
         return {
             headerRight: (
                 <View style={styles.header}>
-                    <IconButton icon="camera" size={27} color="black" onPress={() => navigation.navigate("Panier")} />
+                    <IconButton icon="cart" size={27} color="black" onPress={() => navigation.navigate("Panier")} />
                     <CustomMenuIcon
                         //Menu Text
                         menutext="Menu"
@@ -267,16 +267,16 @@ class ArticleListScreen extends Component {
                 </ImageBackground>
 
                 <Searchbar
-                    // placeholder={screenProps.t('article:placeholder')}
+                    placeholder={screenProps.t('article:placeholder')}
                     onSubmitEditing={() => this._searchFilms()}
                     onChangeText={(text) => this._serachInputChanged(text)}
                     value={this.state.firstQuery}
                     style={styles.searchbar}
                 />
                 <View style={styles.marque_style}>
-                    {/*<Text style={styles.text_marque}> {screenProps.t('article:marque')} </Text>*/}
+                    <Text style={styles.text_marque}> {screenProps.t('article:marque')} </Text>
                     <TouchableOpacity onPress={this.actionFilter}>
-                        <Feather name="filter" size={23} color={bleu}> <Text style={{ color: '#000000'}}>   </Text> </Feather>
+                        <Feather name="filter" size={20} color={bleu}> <Text style={{ color: '#000000'}}>  {screenProps.t('article:filtre')}  </Text> </Feather>
                     </TouchableOpacity>
 
                 </View>

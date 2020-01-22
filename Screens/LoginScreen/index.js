@@ -23,6 +23,7 @@ import {black} from "../../Styles/Colors";
 import {bindActionCreators} from "redux";
 import * as AuthStateActions from "../../Reducers/auth";
 import {validation} from '../../Utils/validation';
+import i18n from "i18next";
 
 
 

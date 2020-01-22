@@ -17,6 +17,7 @@ import {Share} from "../../Components/Share";
 import ReclamationScreen from "../ReclamationScreen";
 import { connect } from 'react-redux'
 import CustomMenuIcon from "../../Components/CustomMenuIcon";
+import {withTranslation} from "react-i18next";
 
 
 
@@ -29,7 +30,7 @@ class ContactScreen extends Component{
         return {
             headerRight: (
                 <View style={styles.header}>
-                    <IconButton icon="shopping-cart" size={27} color="black" onPress={() => navigation.navigate("Panier")} />
+                    <IconButton icon="cart" size={27} color="black" onPress={() => navigation.navigate("Panier")} />
                     <CustomMenuIcon
                         //Menu Text
                         menutext="Menu"
@@ -129,10 +130,10 @@ class ContactScreen extends Component{
                 >
                     <View style={styles.containerBackgroundPhotoInfo}>
                         <Text  style={styles.titleform}>
-                            {/*{screenProps.t('contact:sous_titre')}*/}
+                            {screenProps.t('contact:sous_titre')}
                         </Text>
                         <Text  style={styles.titleInfo}>
-                            {/*{screenProps.t('contact:titre')}*/}
+                            {screenProps.t('contact:titre')}
                         </Text>
                     </View>
                 </ImageBackground>
@@ -159,7 +160,7 @@ class ContactScreen extends Component{
                     onChangeText={(message) => this.setState({message}) }
                     defaultValue={this.state.message}
                     onBlur={()=>this.setState({Error: ''})}
-                    // placeholder={screenProps.t('contact:placeholder')}
+                    placeholder={screenProps.t('contact:placeholder')}
                     placeholderTextColor={'#c7c7c7'}
                     underlineColorAndroid={'transparent'}
                 />
@@ -169,7 +170,7 @@ class ContactScreen extends Component{
                     style={styles.button}
                     onPress={() => this.addContact()}
                 >
-                    {/*<Text style={styles.buttonText}>{screenProps.t('contact:envoyer')}  </Text>*/}
+                    <Text style={styles.buttonText}>{screenProps.t('contact:envoyer')}  </Text>
                 </TouchableOpacity>
                 <View style={styles.tabbar}>
                     <TouchableOpacity>
@@ -196,3 +197,4 @@ const mapStateToProps = (state) => {
     }
 };
 export default connect(mapStateToProps)(ContactScreen)
+withTranslation(['contact'], { wait: true })(ContactScreen);

@@ -39,7 +39,7 @@ const renderDivider = ( created_at, original_language) =>
          return {
              headerRight: (
                  <View style={styles.header}>
-                     <IconButton icon="shopping-cart" size={27} color="black" onPress={() => navigation.navigate("Panier")} />
+                     <IconButton icon="cart" size={27} color="black" onPress={() => navigation.navigate("Panier")} />
                      <CustomMenuIcon
                          //Menu Text
                          menutext="Menu"
@@ -117,9 +117,10 @@ const renderDivider = ( created_at, original_language) =>
                 backdrop_path: data.data.pictures || '',
                 title: data.data.title || '',
                 number_serial: data.data.number_serial || 0,
-                price: data.data.price || 0,
+                price: data.data.price.amount || 0,
                 bar_code: data.data.bar_code || 0,
                 amount: data.data.amount,
+                currency: data.data.currency,
                 articles: data.data,
             });
         }).catch(e => {
@@ -172,7 +173,7 @@ const renderDivider = ( created_at, original_language) =>
                         </View>
                         <View>
                             <Text style={{ fontWeight: 'bold',color:bleu}}> EAN </Text>
-                            <Text style={ {color: darkBlue}}> {number_seria} </Text>
+                            <Text style={ {color: darkBlue}}> {id} </Text>
                         </View>
                     </View>
 
@@ -196,13 +197,13 @@ const renderDivider = ( created_at, original_language) =>
                                     </Text>
                                     <View style={[styles.textRow, styles.containerSubTitle]}>
                                         <Text style={styles.textSmall}>
-                                            <NumberFormat value={price} displayType={'text'} thousandSeparator={true} suffix={'€'} renderText={value => <Text style={styles.textSmall}>{value}</Text>} />
+                                            <NumberFormat value={amount} displayType={'text'} thousandSeparator={true} suffix={'€'} renderText={value => <Text style={styles.textSmall}>{value}</Text>} />
                                         </Text>
                                         <Text style={styles.textSmall}>
                                             RFF {overview}
                                         </Text>
                                         <Text  style={styles.textSmall}>
-                                           FAN {number_seria}
+                                           FAN {currency}
                                         </Text>
                                     </View>
                                 </View>

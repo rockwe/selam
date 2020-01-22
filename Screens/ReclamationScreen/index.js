@@ -16,6 +16,7 @@ import Toast, {DURATION} from 'react-native-easy-toast'
 
 import { connect } from 'react-redux'
 import CustomMenuIcon from "../../Components/CustomMenuIcon";
+import {withTranslation} from "react-i18next";
 
 
 
@@ -45,7 +46,7 @@ class ReclamationScreen extends Component{
         return {
             headerRight: (
                 <View style={styles.header}>
-                    <IconButton icon="shopping-cart" size={27} color="black" onPress={() => navigation.navigate("Panier")} />
+                    <IconButton icon="cart" size={27} color="black" onPress={() => navigation.navigate("Panier")} />
                     <CustomMenuIcon
                         //Menu Text
                         menutext="Menu"
@@ -140,10 +141,10 @@ class ReclamationScreen extends Component{
                 >
                     <View style={styles.containerBackgroundPhotoInfo}>
                         <Text  style={styles.titleform}>
-                            {/*{screenProps.t('reclamer:sous_titre')}*/}
+                            {screenProps.t('reclamer:sous_titre')}
                         </Text>
                         <Text  style={styles.titleInfo}>
-                            {/*{screenProps.t('reclamer:titre')}*/}
+                            {screenProps.t('reclamer:titre')}
                         </Text>
                     </View>
                 </ImageBackground>
@@ -152,7 +153,7 @@ class ReclamationScreen extends Component{
                             style={styles.inputContainerStyle}
                             onBlur={()=>this.setState({Error: ''})}
                             value={this.state.titre}
-                            // placeholder= {screenProps.t('reclamer:placeholder_titre')}
+                            placeholder= {screenProps.t('reclamer:placeholder_titre')}
                             onChangeText={titre => {this.setState({ titre }); let v = validate('title', titre);
                             this.setState({ enterError: !v, enterErrorMessage: v})
                             }}
@@ -166,7 +167,7 @@ class ReclamationScreen extends Component{
                     onChangeText={(description) => this.setState({description})}
                     defaultValue={this.state.description}
                     onBlur={()=>this.setState({Error: ''})}
-                    // placeholder={screenProps.t('reclamer:placeholder_recl')}
+                    placeholder={screenProps.t('reclamer:placeholder_recl')}
                     placeholderTextColor={'#c7c7c7'}
                     underlineColorAndroid={'transparent'}
                 />
@@ -176,7 +177,7 @@ class ReclamationScreen extends Component{
                     style={styles.button}
                     onPress={() => { this.addClain() ; }}
                 >
-                    {/*<Text style={styles.buttonText}> {screenProps.t('reclamer:envoyer')} </Text>*/}
+                    <Text style={styles.buttonText}> {screenProps.t('reclamer:envoyer')} </Text>
                 </TouchableOpacity>
                 <View style={styles.tabbar}>
                     <TouchableOpacity>
@@ -203,3 +204,4 @@ const mapStateToProps = (state) => {
     }
 };
 export default  connect(mapStateToProps)(ReclamationScreen)
+withTranslation(['reclamer'], { wait: true })(ReclamationScreen);

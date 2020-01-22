@@ -10,6 +10,8 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import { DrawerActions } from 'react-navigation'
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
+import i18n from '../I18n/index';
+import {withTranslation   } from 'react-i18next';
 
 
 import PropTypes from 'prop-types';
@@ -476,7 +478,10 @@ class WrappedStack extends React.Component {
         return <AppNavigator screenProps={{ t }} {...this.props} />;
     }
 }
-const ReloadAppOnLanguageChange = (createAppContainer(WrappedStack));
+const ReloadAppOnLanguageChange = withTranslation('common', {
+    bindI18n: 'languageChanged',
+    bindStore: false,
+})(createAppContainer(WrappedStack));
 
 
 const styles = StyleSheet.create({

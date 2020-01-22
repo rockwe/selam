@@ -15,6 +15,7 @@ import Spinner from "../../Components/Spinner";
 import Error from "../../Components/Error";
 import { connect } from 'react-redux'
 import CustomMenuIcon from "../../Components/CustomMenuIcon";
+import {withTranslation} from "react-i18next";
 
 
 
@@ -39,7 +40,7 @@ import CustomMenuIcon from "../../Components/CustomMenuIcon";
         return {
             headerRight: (
                 <View style={styles.header}>
-                    <IconButton icon="shopping-cart" size={27} color="black" onPress={() => navigation.navigate("Panier")} />
+                    <IconButton icon="cart" size={27} color="black" onPress={() => navigation.navigate("Panier")} />
                     <CustomMenuIcon
                         //Menu Text
                         menutext="Menu"
@@ -166,10 +167,10 @@ import CustomMenuIcon from "../../Components/CustomMenuIcon";
                 >
                     <View style={styles.containerBackgroundPhotoInfo}>
                         <Text  style={styles.titleform}>
-                            {/*{screenProps.t('suivre:sous_titre')}*/}
+                            {screenProps.t('suivre:sous_titre')}
                         </Text>
                         <Text  style={styles.titleInfo}>
-                            {/*{screenProps.t('suivre:titre')}*/}
+                            {screenProps.t('suivre:titre')}
                         </Text>
                     </View>
                 </ImageBackground>
@@ -207,3 +208,4 @@ const mapStateToProps = (state) => {
     }
 };
 export default  connect(mapStateToProps)(SuivreCommandeScreen)
+withTranslation(['suivre'], { wait: true })(SuivreCommandeScreen);

@@ -9,6 +9,7 @@ import {IconButton} from "react-native-paper";
 import styles from "./styles";
 import {Badge} from "react-native-elements";
 import CustomMenuIcon from "../../Components/CustomMenuIcon";
+import {withTranslation} from "react-i18next";
 
 
  class ProfilScreen extends React.Component {
@@ -18,7 +19,7 @@ import CustomMenuIcon from "../../Components/CustomMenuIcon";
         return {
             headerRight: (
                 <View style={styles.header}>
-                    <IconButton icon="shopping-cart" size={27} color="black" onPress={() => navigation.navigate("Panier")} />
+                    <IconButton icon="cart" size={27} color="black" onPress={() => navigation.navigate("Panier")} />
                     <CustomMenuIcon
                         //Menu Text
                         menutext="Menu"
@@ -78,10 +79,10 @@ import CustomMenuIcon from "../../Components/CustomMenuIcon";
                 >
                     <View style={styles.containerBackgroundPhotoInfo}>
                         <Text  style={styles.titleform}>
-                            {/*{screenProps.t('profil:sous_titre')}*/}
+                            {screenProps.t('profil:sous_titre')}
                         </Text>
                         <Text  style={styles.titleInfo}>
-                            {/*{screenProps.t('profil:titre')}*/}
+                            {screenProps.t('profil:titre')}
                         </Text>
                     </View>
                 </ImageBackground>
@@ -92,7 +93,7 @@ import CustomMenuIcon from "../../Components/CustomMenuIcon";
                     <View style={styles.contener_name}>
                         <View style={styles.contener_form}>
                         <Text  style={styles.Nameform}>
-                            {/*{screenProps.t('profil:nom')}*/}
+                            {screenProps.t('profil:nom')}
                         </Text>
                         <TextInput
                             style={styles.text_input}
@@ -109,7 +110,7 @@ import CustomMenuIcon from "../../Components/CustomMenuIcon";
                         <View style={styles.contener_name}>
                         <View style={styles.contener_form}>
                         <Text  style={styles.Nameform}>
-                            {/*{screenProps.t('profil:email')}*/}
+                            {screenProps.t('profil:email')}
                         </Text>
                         <TextInput
                             style={styles.text_input}
@@ -126,7 +127,7 @@ import CustomMenuIcon from "../../Components/CustomMenuIcon";
                         <View style={styles.contener_name}>
                         <View style={styles.contener_form}>
                         <Text  style={styles.Nameform}>
-                            {/*{screenProps.t('profil:pass')}*/}
+                            {screenProps.t('profil:pass')}
                         </Text>
                         <TextInput
                             secureTextEntry
@@ -146,7 +147,7 @@ import CustomMenuIcon from "../../Components/CustomMenuIcon";
                     style={styles.button}
                     onPress={this.onPress}
                 >
-                    {/*<Text style={styles.buttonText}> {screenProps.t('profil:save')} </Text>*/}
+                    <Text style={styles.buttonText}> {screenProps.t('profil:save')} </Text>
                 </TouchableOpacity>
 
                 <View style={styles.tabbar}>
@@ -176,4 +177,5 @@ const mapStateToProps = (state) => {
     }
 };
 export default  connect(mapStateToProps)(ProfilScreen);
+withTranslation(['profil'], { wait: true })(ProfilScreen);
 

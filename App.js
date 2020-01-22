@@ -12,7 +12,7 @@ import RootNavigation from './Containers/Navigation';
 import { Provider } from 'react-redux';
 import store from './Reducers/store';
 import Colors from './constants/Colors'
-import {ActivityIndicator} from "react-native-paper";
+import {ActivityIndicator} from 'react-native-paper';
 
 
 export default class App extends React.Component {

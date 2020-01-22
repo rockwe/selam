@@ -23,6 +23,7 @@ import {create,PREDEF_RES} from 'react-native-pixel-perfect'
 import {Badge} from "react-native-elements";
 
 import CustomMenuIcon from "../../Components/CustomMenuIcon";
+import {withTranslation} from "react-i18next";
 
 const calcSize = create(PREDEF_RES.iphone7.px);
 var NumberFormat = require('react-number-format');
@@ -68,7 +69,7 @@ class ArticleDetailsScreen extends Component{
         return {
             headerRight: (
                 <View style={styles.header}>
-                    <IconButton icon="shopping-cart" size={27} color="black" onPress={() => navigation.navigate("Panier")} />
+                    <IconButton icon="cart" size={27} color="black" onPress={() => navigation.navigate("Panier")} />
                     <CustomMenuIcon
                         //Menu Text
                         menutext="Menu"
@@ -171,8 +172,8 @@ class ArticleDetailsScreen extends Component{
         const { isError, title } = this.state;
             Share({
                 message: `${title}, know everything about this product and the company that developed this application  \u{1F37F}`,
-                url: `https://www.Valomnia.tn`,
-                title: 'Valomnia',
+                url: `https://www.Selam.com`,
+                title: 'Selam New',
                 dialogTitle: `${title}, know everything about this product and the company that develops this application\u{1F37F}`
             });
 
@@ -295,7 +296,7 @@ class ArticleDetailsScreen extends Component{
                                     leftButtonBackgroundColor='#E56B70' />
                                 <View style={styles.row}>
                                     <Button mode="contained" onPress={() => this._togglePanier(articles, this.state.value)} style={styles.button}>
-                                        {/*{screenProps.t('detailA:ajou_panier')}*/}
+                                        {screenProps.t('detailA:ajou_panier')}
                                     </Button>
                                 </View>
                             </View>
@@ -320,3 +321,4 @@ const mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps)(ArticleDetailsScreen);
+withTranslation(['detailA'], { wait: true })(ArticleDetailsScreen);

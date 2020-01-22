@@ -22,7 +22,8 @@ import {bindActionCreators} from 'redux';
 import * as AuthStateActions from '../Reducers/auth';
 import {Badge} from 'react-native-elements';
 import API from '../Services/Api'
-//import {withTranslation } from "react-i18next";
+import {withTranslation} from 'react-i18next';
+
 
 
 
@@ -76,19 +77,19 @@ class DrawerScreen extends Component {
                         <TouchableOpacity style={styles.menuItem} onPress={this.navigateToScreen('Home')}>
                             <Feather style={{marginLeft:20}} name="home" size={27}  />
                             <Text style={ styles.text }>
-                                {/*{screenProps.t('drawer:accueil')}*/}
+                                {screenProps.t('drawer:accueil')}
                             </Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.menuItem} onPress={this.navigateToScreen('ArticleList')} >
                             <Feather style={{marginLeft:20}} name="search" size={27}  />
                             <Text style={ styles.text }>
-                                {/*{screenProps.t('drawer:rechercher')}*/}
+                                {screenProps.t('drawer:rechercher')}
                             </Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.menuItem} onPress={this.navigateToScreen('Panier')}>
                             <Feather style={{marginLeft:20}} name="shopping-cart" size={27}  />
                             <Text style={ styles.text }>
-                                {/*{screenProps.t('drawer:panier')}*/}
+                                {screenProps.t('drawer:panier')}
                             </Text>
                             <View>
                                 <Badge status="warning" value={this.props.panierArticle.length} containerStyle={{   left: 10 }} />
@@ -97,43 +98,43 @@ class DrawerScreen extends Component {
                         <TouchableOpacity style={styles.menuItem} onPress={this.navigateToScreen('SuivreC')}>
                             <Feather style={{marginLeft:20}} name="truck" size={27}  />
                             <Text style={ styles.text }>
-                                {/*{screenProps.t('drawer:suivre_com')}*/}
+                                {screenProps.t('drawer:suivre_com')}
                             </Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.menuItem} onPress={this.navigateToScreen('Reclamation')}>
                             <FontA style={{marginLeft:20}} name="headset" size={27}  />
                             <Text style={ styles.text }>
-                                {/*{screenProps.t('drawer:reclamation')}*/}
+                                {screenProps.t('drawer:reclamation')}
                             </Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.menuItem} onPress={this.navigateToScreen('Barcode')}>
                             <FontA style={{marginLeft:20}} name="barcode" size={27}  />
                             <Text style={ styles.text }>
-                                {/*{screenProps.t('drawer:scanner')}*/}
+                                {screenProps.t('drawer:scanner')}
                             </Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.menuItem} onPress={this.navigateToScreen('Langue')}>
                             <Feather style={{marginLeft:20}} name="globe" size={27}  />
                             <Text style={ styles.text }>
-                                {/*{screenProps.t('drawer:langue')}*/}
+                                {screenProps.t('drawer:langue')}
                             </Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.menuItem} onPress={this.navigateToScreen('Contact')}>
                             <Feather style={{marginLeft:20}} name="mail" size={27}  />
                             <Text style={ styles.text }>
-                                {/*{screenProps.t('drawer:contact')}*/}
+                                {screenProps.t('drawer:contact')}
                             </Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.menuItem} onPress={this.navigateToScreen('Profil')}>
                             <Feather style={{marginLeft:20}} name="settings" size={27}  />
                             <Text style={ styles.text }>
-                                {/*{screenProps.t('drawer:setting')}*/}
+                                {screenProps.t('drawer:setting')}
                             </Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.menuItem} onPress={() => this.logout() }>
                             <Feather style={{ marginLeft: 20}} name="log-out" size={27}  />
                             <Text style={ [styles.text , styles.text_color]} >
-                                {/*{screenProps.t('drawer:deconnecter')}*/}
+                                {screenProps.t('drawer:deconnecter')}
                             </Text>
                         </TouchableOpacity>
                     </View>
@@ -195,6 +196,7 @@ const mapStateToProps1 = (dispatch) => {
 
 
 export default connect(mapStateToProps, mapStateToProps1)(DrawerScreen);
+withTranslation(['drawer', 'common'], { wait: true })(DrawerScreen);
 
 
 

@@ -2,8 +2,8 @@
 import React, { Component } from 'react';
 import { View, Text,Image, TouchableOpacity, Platform  } from 'react-native';
 import Menu, { MenuItem, MenuDivider } from 'react-native-material-menu';
-import {IconButton} from "react-native-paper";
-const MORE_ICON = Platform.OS === 'ios' ? 'more-horiz' : 'more-vert';
+import {IconButton} from 'react-native-paper';
+const MORE_ICON = Platform.OS === 'ios' ? 'list' : 'settings';
 
 export default class CustomMenuIcon extends Component {
     _menu = null;
