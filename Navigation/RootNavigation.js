@@ -2,7 +2,8 @@ import React from 'react';
 import { Platform, Image, StyleSheet, StatusBar, TouchableOpacity, Dimensions } from 'react-native';
 import {
     createAppContainer,
-    createSwitchNavigator
+    createSwitchNavigator,
+    StackRouter
 } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createDrawerNavigator } from 'react-navigation-drawer';
@@ -32,6 +33,8 @@ import BarCodeDetailScreen from '../Screens/BarCodeDetailSreen';
 import DrawerScreen from './DrawerItems';
 import Feather from "react-native-vector-icons/Feather";
 import FontA from "react-native-vector-icons/FontAwesome5";
+import { NavigationActions } from 'react-navigation';
+import {connect} from "react-redux";
 
 const TitleHomeTab = 'Home';
 const TitleArticleTab = 'Article';
@@ -472,16 +475,14 @@ const AppNavigator = createSwitchNavigator(
 );
 
 class WrappedStack extends React.Component {
+
     static router = AppNavigator.router;
     render() {
         const { t } = this.props;
         return <AppNavigator screenProps={{ t }} {...this.props} />;
     }
 }
-const ReloadAppOnLanguageChange = withTranslation('common', {
-    bindI18n: 'languageChanged',
-    bindStore: false,
-})(createAppContainer(WrappedStack));
+const ReloadAppOnLanguageChange = (createAppContainer(WrappedStack));
 
 
 const styles = StyleSheet.create({
@@ -493,5 +494,5 @@ const styles = StyleSheet.create({
         backgroundColor: '#000000'
     },
 });
-export default ReloadAppOnLanguageChange;
+export default withTranslation()(ReloadAppOnLanguageChange);
 

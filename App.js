@@ -13,6 +13,9 @@ import { Provider } from 'react-redux';
 import store from './Reducers/store';
 import Colors from './constants/Colors'
 import {ActivityIndicator} from 'react-native-paper';
+import { PersistGate } from 'redux-persist/es/integration/react';
+import { persistStore } from 'redux-persist'
+import './I18n/index'
 
 
 export default class App extends React.Component {
@@ -34,13 +37,15 @@ export default class App extends React.Component {
           />
       );
     }
-
+    let persistor = persistStore(store)
     return (
         <Provider store={store}>
+          <PersistGate persistor={persistor}>
           <View style={styles.container}>
             <StatusBar barStyle="light-content" backgroundColor={Colors.watermelon} />
             <RootNavigation />
           </View>
+          </PersistGate>
         </Provider>
     )
   }
